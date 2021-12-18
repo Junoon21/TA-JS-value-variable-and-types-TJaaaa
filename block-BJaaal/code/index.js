@@ -44,5 +44,5 @@ alert(`The total amount is ${amount} \n the tax amount is ${(amount*taxPercent)/
   `
   - Above message should be in two lines
 */
-alert("The total amount is ${amount} \n the tax amount is ${(amount*taxPercent)/100}");
+alert("The total amount is"+ amount +"\n the tax amount is"+ ((amount*taxPercent)/100));
 
