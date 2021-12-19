@@ -54,7 +54,7 @@ houseName==="stark"? alert("winter is coming"):houseName==="lannister"?alert("A 
 // Switch
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
-let monthNumber=Number(alert("the number of the month 1 to 12?"));
+let monthNumber=Number(prompt("the number of the month 1 to 12?"));
 switch (monthNumber)
 {
   case 1 : alert("month has 30 days");
@@ -91,12 +91,30 @@ switch (monthNumber)
   - `Salary > 50000` tax is 30 %
 
 */
-let salary=Number(alert"enter salary");
-// switch (salary)
-// {
-//   case 
-//   alert(``the amount is )
-// }
+let Salary=Number(prompt("enter salary"));
+switch (true)
+{
+  case Salary <= 20000: {
+    let tax=(20000*10)/100;
+  alert(`the in-hand amount is ${Salary-tax}`);
+  break;
+  }
+  
+  case Salary <= 40000: {
+    let tax=(40000*20)/100;
+    alert(`the in-hand amount is ${Salary-tax}`);
+    break;
+  }
+  
+  case Salary <= 50000: 
+  {
+    let tax=(50000*30)/100;
+    alert(`the in-hand amount is ${Salary-tax}`);
+    break;
+  }
+  
+  default:alert("not valid");
+}
 
 //  if..else vs switch
 
@@ -110,10 +128,10 @@ Implement the condition give below using`if..else` and`switch` statement.
   - `marks > 0` alert`"Grade D"`
 
 */
-let marks=Number(alert("enter marks"));
-if( marks>0)
+let marks=Number(prompt("enter marks"));
+if( marks>100)
 {
-  alert("grade d ");
+  alert ("Marks can't be greater than 100");
 }
 else if(marks > 30 && marks < 50) {
   alert ("Grade C");
@@ -125,7 +143,22 @@ else if(marks > 80 && marks < 100) {
   alert("Grade a");
 }
 else {
-  alert ("Marks can't be greater than 100");
+  alert ("grad d");
+}
+switch (true)
+{ case marks > 100 :
+  alert("Marks can't be greater than 100");
+  break;
+  case marks > 30 && marks < 50 :
+    alert ("Grade C");
+  break;
+  case marks > 50 && marks < 80 :
+    alert("Grade b");
+  break;
+  case marks > 80 && marks < 100:
+    alert("Grade a");
+  break;
+  default: alert("grade d ");
 }
 
 
@@ -142,14 +175,11 @@ let weather=prompt("What is the weather like outside?");
 switch(weather) {
   case "sunny":alert("Wear a T-shirt");
   break;
-  case rainy:alert("Don't forget to take your raincoat");
+  case "rainy":alert("Don't forget to take your raincoat");
   break;
-  case hot:alert("Get a hanky");
+  case "hot":alert("Get a hanky");
   break;
-  case freezing:alert("Get your sweeter on");
+  case "freezing":alert("Get your sweeter on");
   break;
-  default sunny:alert("Not a valid input");
-
-
-
+  default:alert("Not a valid input");
 }
