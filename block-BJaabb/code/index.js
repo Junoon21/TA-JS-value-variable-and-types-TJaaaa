@@ -5,19 +5,19 @@
 3. Declare variable `age` and `isLearning` with value `22` and `true` in the same line. hint: declaring multiplemvariable in one line.
 4. Now change the value of `user` to `John` and log the value of both `user` and `userName`.
 */
-var user=prompt("enter name:");
+let user=prompt("enter name:");
 alert(`the name is ${user}`);
-var userName=user;
+let userName=user;
 console.log(`the values are ${user} ${userName}`);
-var age=22,isLearning=true;
+let age=22,isLearning=true;
 user=`john`;
 console.log(`the values of user and username ${user} ${userName}`);
 /* 2.
 Use `prompt` to take two numbers from user and store it in variable `numA` and `numB`. Create a third variable called `sum`, using `+` operator add numA and numB , store it in varible `sum` and using alert display `sum` in browser.
 */
-var numA=Number(prompt("enter numa"));
-var numB=Number(prompt("enter numB"));
-var sum=numA+numB;
+let numA=Number(prompt("enter numa"));
+let numB=Number(prompt("enter numB"));
+let sum=numA+numB;
 alert(`the sum is ${sum}`);
 
 
@@ -26,12 +26,10 @@ alert(`the sum is ${sum}`);
 
 // 3. Complete the following code to make the output be 0 2 4 6 8 10?
 
-for (let j = 0; j <= 10; j++) 
-{    if(j%2===0)
-    {
+for (let j = 0; j <= 10; j+=2) 
+{    
         console.log(j);
-    }
-   
+
 }
 
 
@@ -45,27 +43,26 @@ for (let j = 10; j > 0; j--)
 }
 
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
-let sum=0;
+let sum="";
 let i=5;
 while(i>=0)
 {
-    var sum=sum+"i";
-    alert(`sum= ${sum}`);
+     sum=sum+i;
     i--;
 }
+alert(`sum= ${sum}`);
 
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
-let sum=0;
-let i=10;
-while(i>=0)
-{if(i%2===0)
+let sum="";
+let ieven=10;
+while(ieven>=0)
+{if(ieven%2===0)
     {
-        var sum=sum+"i";
-        alert(`sum= ${sum}`);
+         sum=sum+ieven; 
     }
-    i--;
-    
+    ieven--;      
 }
+alert(`sum= ${sum}`);
 // Comparisoin
 
 /* 7. Take two value using prompt and store them in variables `num1` and `num2`. Check whether they are equal or not.
@@ -80,16 +77,13 @@ Example:
 "hello", -21; // false
 
 */
-var num1=prompt(`enter num1`);
-var num2=prompt(`enter num2`);
-if(num1===num2)
-{
-    alert(`equal`);
-}
-else {
-    alert(`not equal`);
-}
-if ((num1===`true`||num1===`null`|num1===`undefined`)|| (num1===`true`||num1===`null`|num1===`undefined`))
-{
+let num1=+prompt(`enter num1`);
+let num2=+prompt(`enter num2`);
+
+if (isNaN(num1)|| isNaN(num2)){
     alert(`Enter a valid value`);
+}
+else 
+{
+    alert(num1===num2);
 }
