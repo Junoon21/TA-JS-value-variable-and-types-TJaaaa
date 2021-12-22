@@ -14,14 +14,32 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
-for(let no_of_phone=0;bank_balance>99.99;no_of_phone++)
+while(amount<bank_balance)
 {
-    var bank_balance=bank_balance- PHONE_PRICE;
+    amount+=PHONE_PRICE;
+    if(amount<SPENDING_THRESHOLD)
+    {
+        amount+=ACCESSORY_PRICE;
+    }
 }
-var purchase_ampunt=bank_balance;
-alert("you dont have enough money to buy a phone now");
-for(let no_of_accessories=0;no_of_accessories<no_of_phone;no_of_accessories++)
+let tax=amount*TAX_RATE;
+amount+=tax;
+console.log(amount);
+if(bank_balance>amount)
 {
-    if(purchase_ampunt=bank_balance;)
+console.log(`can afford it`);
 }
+else {
+    console.log(`can not afford it`);
+}
+// for(let no_of_phone=0;bank_balance>99.99;no_of_phone++)
+// {
+//     var bank_balance=bank_balance- PHONE_PRICE;
+// }
+// var purchase_ampunt=bank_balance;
+// alert("you dont have enough money to buy a phone now");
+// for(let no_of_accessories=0;no_of_accessories<no_of_phone;no_of_accessories++)
+// {
+//     if(purchase_ampunt=bank_balance;)
+// }
 // ⛑ Answer of the above will `$334.76`.
